@@ -1,0 +1,1 @@
+<?php include('attachments-page.php'); ?>

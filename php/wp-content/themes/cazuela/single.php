@@ -5,7 +5,7 @@
  * @package Cazuela
  * @since Cazuela 1.0
  */
-
+ 
 get_header(); ?>
 
 		<div id="primary" class="content-area">
@@ -21,6 +21,8 @@ get_header(); ?>
 				<?php thsp_content_nav( 'nav-above' ); ?>
 
 				<?php get_template_part( 'content', 'single' ); ?>
+				
+				<?php get_template_part( 'attachments', 'single' ); ?>
 
 				<?php thsp_content_nav( 'nav-below' ); ?>
 
