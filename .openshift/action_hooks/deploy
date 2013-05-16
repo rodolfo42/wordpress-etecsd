@@ -21,6 +21,20 @@ if [ ! -d $OPENSHIFT_DATA_DIR/blogs.dir ]; then
     mkdir $OPENSHIFT_DATA_DIR/blogs.dir
 fi
 
+# Copies files from pushed code to DATA_DIR and deletes the repo dir
+# so you can push themes and plugins
+if [ -d $OPENSHIFT_REPO_DIR/php/wp-content/themes ]; then
+	cp -arf $OPENSHIFT_REPO_DIR/php/wp-content/themes/* $OPENSHIFT_DATA_DIR/themes
+	rm -rf $OPENSHIFT_REPO_DIR/php/wp-content/themes
+fi
+
+if [ -d $OPENSHIFT_REPO_DIR/php/wp-content/plugins ]; then
+	cp -arf $OPENSHIFT_REPO_DIR/php/wp-content/plugins/* $OPENSHIFT_DATA_DIR/plugins
+	rm -rf $OPENSHIFT_REPO_DIR/php/wp-content/plugins
+fi
+
+# left blogs.dir and uploads untouched because uploading them is really bad practice
+
 ln -sf $OPENSHIFT_DATA_DIR/blogs.dir $OPENSHIFT_REPO_DIR/php/wp-content/
 ln -sf $OPENSHIFT_DATA_DIR/plugins $OPENSHIFT_REPO_DIR/php/wp-content/
 ln -sf $OPENSHIFT_DATA_DIR/themes $OPENSHIFT_REPO_DIR/php/wp-content/
