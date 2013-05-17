@@ -19,15 +19,17 @@ Title Field: <?php echo $attachments->field( 'title' ); ?><br />
 Caption Field: <?php echo $attachments->field( 'caption' ); ?>
 */
 	$at = array(
+		'id' => $attachments->id(),
 		'title' => $attachments->field( 'title' ),
-		'mimetype' => $attachments->type(),
+		'mimetype' => get_post_mime_type( $attachments->id() ),
+		// 'mimetype' => $attachments->type(),
 		'size' => $attachments->filesize(),
 		'src' => $attachments->src( 'full' ),
 		'thumb' => $attachments->src( 'thumbnail' ),
 		'url' => $attachments->url()
 	);
-	
-	if( preg_match("/^image.*/i", $attachments->type()) ) {
+
+	if( strstr($at['mimetype'], 'image') ) {
 		$fotos[] = $at;
 	} else {
 		$arquivos[] = $at;
