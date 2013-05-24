@@ -78,6 +78,9 @@ table {
 caption, th, td {
   font-weight: normal;
   text-align: left;
+  border-collapse: collapse;
+  padding: 5px;
+  border: 1px solid #DDD;
 }
 
 blockquote:before, blockquote:after,
