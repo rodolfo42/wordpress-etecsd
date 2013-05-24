@@ -4,8 +4,8 @@ RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
 
-RewriteCond %{REQUEST_URI} ^/fotos/([0-9a-z]+)/([0-9a-z\.]+)$ [NC]
-	RewriteRule ^fotos/([0-9a-z]+)/([0-9A-Za-z\.]+)$ /wp-content/uploads/2013/05/$2 [R=301,L]
+RewriteCond %{REQUEST_URI} ^/fotos/([0-9a-z]+)/(.+)$ [NC]
+	RewriteRule ^fotos/(.*)/(.*)$ /wp-content/uploads/2013/05/$2 [R=301,L]
 	
 RewriteCond %{REQUEST_URI} ^/noticia/([0-9]+)/(.*)$ [NC]
 	RewriteRule ^noticia/(.*)/(.*)$ /?p=$1 [R=301,L]
