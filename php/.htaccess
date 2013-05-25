@@ -4,6 +4,16 @@ RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
 
+# redirecionamento de sc.etecsantosdumont.com.br para raíz de /alumni
+RewriteCond %{HTTP_HOST} ^sc\.etecsantosdumont\.com\.br$
+RewriteCond %{REQUEST_URI} !^/alumni/(.*)$
+	RewriteRule ^(.*)$ alumni/$1 [QSA,L]
+	
+# redirecionamento de antigo.etecsantosdumont.com.br para raíz de /antigo
+RewriteCond %{HTTP_HOST} ^antigo\.etecsantosdumont\.com\.br$
+RewriteCond %{REQUEST_URI} !^/antigo/(.*)$
+	RewriteRule ^(.*)$ antigo/$1 [QSA,L]
+
 RewriteCond %{REQUEST_URI} ^/fotos/([0-9a-z]+)/(.+)$ [NC]
 	RewriteRule ^fotos/(.*)/(.*)$ /wp-content/uploads/2013/05/$2 [R=301,L]
 	
@@ -12,11 +22,6 @@ RewriteCond %{REQUEST_URI} ^/noticia/([0-9]+)/(.*)$ [NC]
 
 RewriteCond %{REQUEST_URI} ^/noticia/([0-9]+)$ [NC]
 	RewriteRule ^noticia/(.*)$ /?p=$1 [R=301,L]
-	
-# redirecionamento de sc.etecsantosdumont.com.br para raíz de app/webroot/alumni/
-RewriteCond %{HTTP_HOST} ^sc\.etecsantosdumont\.com\.br$
-RewriteCond %{REQUEST_URI} !^/alumni/(.*)$
-	RewriteRule ^(.*)$ alumni/$1 [QSA,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
