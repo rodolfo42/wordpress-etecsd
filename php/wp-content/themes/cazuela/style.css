@@ -546,7 +546,7 @@ blockquote {
 }
 .scheme-white #colophon,
 .scheme-white #after-footer {
-  background: #fff;
+  background: #272727;
 }
 .scheme-white #colophon h1, .scheme-white #colophon h2, .scheme-white #colophon h3, .scheme-white #colophon h4, .scheme-white #colophon h5, .scheme-white #colophon h6,
 .scheme-white #colophon a,
@@ -1132,6 +1132,7 @@ blockquote {
 #colophon #footer-nav #footer-credits {
   float: left;
   width: 33.333%;
+  display: none;
 }
 
 #before-footer {
@@ -1284,8 +1285,8 @@ blockquote {
   -ms-hyphens: auto;
 }
 .dynamic-widget-width .widget:nth-child(3n+1) {
-  clear: left;
-  padding-left: 0;
+/*  clear: left;
+  padding-left: 0;*/
 }
 .dynamic-widget-width .widget:nth-child(3n+3) {
   padding-right: 0;
