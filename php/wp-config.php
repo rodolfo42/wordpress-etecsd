@@ -22,7 +22,7 @@ if($isOpenShift) {
 	$dbPass = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
 	$dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST') . ':' . getenv('OPENSHIFT_MYSQL_DB_PORT');
 } else {
-	$dbConfig = (array)json_decode(file_get_contents ('db.json'));
+	$dbConfig = (array)json_decode(file_get_contents(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'db.json'));
 	$dbName = $dbConfig['name'];
 	$dbUser = $dbConfig['user'];
 	$dbPass = $dbConfig['pass'];
