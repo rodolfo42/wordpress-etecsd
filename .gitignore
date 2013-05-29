@@ -1,3 +1,4 @@
 .project
+.idea
 php/wp-content/uploads
 php/db.json

@@ -62,7 +62,14 @@ function thsp_hook_after_footer() {
 	<div id="after-footer" class="clearfix">
 		<div class="inner clearfix">
 			<?php do_action( 'thsp_after_footer' ); ?>
-			<small>Desenvolvimento: <a href="http://rodolfoferreira.com.br/" target="_blank">Rodolfo Ferreira</a> &copy <?php echo date('Y'); ?> | Conteúdo propriedade da ETEC Alberto Santos Dumont - Guarujá/SP<br />Tema: <a href="http://thematosoup.com/themes/cazuela/" target="_blank">Cazuela</a> para <a href="http://wordpress.org/" target="_blank">WordPress</a></small>
+			<div class="clearfix" style="overflow: hidden">
+			<div style="float: right; text-align: right;">
+				<small>Desenvolvimento: <a href="http://rodolfoferreira.com.br/" target="_blank">Rodolfo Ferreira</a> | Código-fonte aberto no <a href="http://goo.gl/UAhgc" target="_blank">GitHub</a><br />Conteúdo: &copy; <?php echo date('Y'); ?> - ETEC Alberto Santos Dumont - Guarujá/SP</small>
+			</div>
+			<div style="float: left;">
+				<small>Tema: <a href="http://thematosoup.com/themes/cazuela/" target="_blank">Cazuela</a> para <a href="http://wordpress.org/" target="_blank">WordPress</a></small>
+			</div>
+			</div>
 		</div>
 	</div><!-- #after-footer -->
 	<?php }

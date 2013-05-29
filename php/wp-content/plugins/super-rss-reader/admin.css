@@ -1,0 +1,104 @@
+/* 
+Shortcoder Admin theme
+By : Aakash Chakravarthy (www.aakashweb.com)
+Version : 1.6
+*/
+
+.boxes {
+	padding: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-top: 1px solid #D4D4D4;
+	border-bottom: 3px solid #666666;
+	background: #FFFFFF;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	border-right: 1px solid #EBEBEB;
+	border-left: 1px solid #EBEBEB;
+}
+.boxes:hover{
+	border-bottom-color: #FF0033;
+}
+#sc_content{
+	width: 100%;
+}
+.setting-description{
+	font-size: 10px;
+	color: #666666;
+}
+.wrap{
+	width: 75%;
+	float: left;
+	margin: 0px;
+}
+.wrap h3 {
+	font: italic 21px "Times New Roman", Times, serif;
+	color: #333333;
+}
+.wrap #sc_content {
+	background: #FFFFFF;
+}
+.wrap #preview_box {
+	background: #FFFFFF;
+	border: 1px solid #E8E8E8;
+	padding: 10px;
+	margin-top: -10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-khtml-border-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+}
+#sidebar{
+	float: right;
+	height: 80%;
+	width: 24%;
+	margin-top: 45px;
+	margin-left: 0px;
+}
+#sidebar ul{
+	height: 80%;
+	width: 90%;
+	border: 1px solid #E9E9E9;
+	margin-right: 15px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-khtml-border-radius-bottomright: 10px;
+	-khtml-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	background: #FFFFFF;
+	padding: 5px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+#sidebar li{
+	display: block;
+	padding: 3px;
+	border-bottom: 1px solid #E2E2E2;
+}
+#sidebar li a{
+	text-decoration: none;
+}
+#sidebar h4{
+	color: #333333;
+	margin-top: 2px;
+	margin-bottom: 5px;
+	font: bold 14px Arial, Helvetica, sans-serif;
+	margin-left: 5px;
+}
+
+#donators li{
+	display: inline-table;
+	font-size: 9px;
+	line-height: 1px;
+	text-decoration: none;
+	border-bottom-style: none;
+}
